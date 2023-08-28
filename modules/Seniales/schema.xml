@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_seniales</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_seniales` (
+`senialesid` INT(11) NOT NULL,
+`senialesno` VARCHAR(255) DEFAULT NULL,
+`signalid` VARCHAR(14) DEFAULT NULL,
+`accountid` INT(40) DEFAULT NULL,
+`opercode` VARCHAR(20) DEFAULT NULL,
+`portnum` VARCHAR(10) DEFAULT NULL,
+`linnum` VARCHAR(10) DEFAULT NULL,
+`alarmdate` DATETIME DEFAULT NULL,
+`alarmcode` VARCHAR(10) DEFAULT NULL,
+`alarmzones` VARCHAR(60) DEFAULT NULL,
+`alarmpriority` VARCHAR(10) DEFAULT NULL,
+`alarmtype` VARCHAR(10) DEFAULT NULL,
+`displayzone` VARCHAR(1) DEFAULT NULL,
+`isrunaway` VARCHAR(1) DEFAULT NULL,
+`alert` VARCHAR(1) DEFAULT NULL,
+`ismanual` VARCHAR(1) DEFAULT NULL,
+`dispositionid` VARCHAR(10) DEFAULT NULL,
+`tzoffset` VARCHAR(10) DEFAULT NULL,
+`hasopactivity` VARCHAR(1) DEFAULT NULL,
+`hasvideo` VARCHAR(1) DEFAULT NULL,
+`hasaudio` VARCHAR(1) DEFAULT NULL,
+`hasimage` VARCHAR(1) DEFAULT NULL,
+`wasquicklogged` VARCHAR(1) DEFAULT NULL,
+`rawdata` VARCHAR(16) DEFAULT NULL,
+PRIMARY KEY (`senialesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_senialescf</name>
+			<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_senialescf` (
+`senialesid` INT(11) NOT NULL,
+PRIMARY KEY (`senialesid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>
